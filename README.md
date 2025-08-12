@@ -83,6 +83,9 @@ docker build -t humoid-trader .
 
 run
 
+```
+xhost +local:docker
+```
 
 
 ```
