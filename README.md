@@ -17,5 +17,5 @@ docker run --rm -it \
   -v "$HOME/humoid_data:/data" \
   -v "$HOME/humoid_data/nltk_data:/root/nltk_data" \
   -v "$HOME/humoid_data/weaviate:/root/.cache/weaviate-embedded" \
-  humoid-chat
+  humoid-trader
 ```
