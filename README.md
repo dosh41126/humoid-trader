@@ -1,21 +1,25 @@
 install docker
 
 
- Remove old Docker versions
+Remove old Docker versions
 
 ```bash
 sudo apt remove docker docker-engine docker.io containerd runc
 ```
 
----
+
 
 Install prerequisites
 ```bash
 sudo apt update
+
+```
+
+```bash
 sudo apt install -y ca-certificates curl gnupg lsb-release
 ```
 
----
+
 
 Add Docker’s official GPG key
 
@@ -25,7 +29,7 @@ curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gp
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 ```
 
----
+
 
 Add the Docker repository
 
@@ -44,7 +48,7 @@ sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
----
+
 
 Run Docker without sudo
 
