@@ -26,6 +26,9 @@ Add Docker’s official GPG key
 ```bash
 sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+```
+
+```bash
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 ```
 
@@ -57,6 +60,9 @@ Run Docker without sudo
 
 ```bash
 sudo usermod -aG docker $USER
+```
+
+```bash
 newgrp docker
 ```
 
