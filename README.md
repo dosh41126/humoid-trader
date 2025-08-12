@@ -1,3 +1,8 @@
+clone
+```
+https://github.com/dosh41126/humoid-trader
+```
+
 build
 
 
