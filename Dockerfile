@@ -104,15 +104,15 @@ download_and_verify() {
 download_and_verify "$BASE_MODEL_URL" "$BASE_MODEL_PATH" "$BASE_MODEL_SHA256"
 download_and_verify "$MM_PROJ_URL" "$MM_PROJ_PATH" "$MM_PROJ_SHA256"
 
-download_and_verify "https://huggingface.co/openai/gpt-oss-20b/resolve/main/model-00000-of-00002.safetensors" "$OSS_DIR/model-00000-of-00002.safetensors" "01e8ee0bed82226ac31d791bb587136cc8abaeaa308b909f00f738561f6f57a0"
-download_and_verify "https://huggingface.co/openai/gpt-oss-20b/resolve/main/model-00001-of-00002.safetensors" "$OSS_DIR/model-00001-of-00002.safetensors" "3f05b8460cc6c36fa6d570fe4b6e74b49a29620f29264c82a02cf4ea5136f10c"
-download_and_verify "https://huggingface.co/openai/gpt-oss-20b/resolve/main/model-00002-of-00002.safetensors" "$OSS_DIR/model-00002-of-00002.safetensors" "83619e36cf07cf941b551b1a528bab563148591ae4e52b38030bc557d383be7c"
+download_and_verify "https://huggingface.co/openai/gpt-oss-20b/resolve/main/model-00000-of-00002.safetensors" "$OSS_DIR/model-00000-of-00002.safetensors" "16d0f997dcfc4462089d536bffe51b4bcea2f872f5c430be09ef8ed392312427"
+download_and_verify "https://huggingface.co/openai/gpt-oss-20b/resolve/main/model-00001-of-00002.safetensors" "$OSS_DIR/model-00001-of-00002.safetensors" "4fbe328ab445455d6f58dc73852b85873bd626986310abd91cd4d2ce3245eaea"
+download_and_verify "https://huggingface.co/openai/gpt-oss-20b/resolve/main/model-00002-of-00002.safetensors" "$OSS_DIR/model-00002-of-00002.safetensors" "a18106b209e9ab35c3406db4f6f12a927364a058b21e9d1373d682e20674b303"
 
 # Tokenizer files
 download_and_verify "https://huggingface.co/openai/gpt-oss-20b/resolve/main/tokenizer.json" "$OSS_DIR/tokenizer.json" "0614fe83cadab421296e664e1f48f4261fa8fef6e03e63bb75c20f38e37d07d3"
-download_and_verify "https://huggingface.co/openai/gpt-oss-20b/resolve/main/tokenizer_config.json" "$OSS_DIR/tokenizer_config.json" "PUT_SHA_HERE"
-download_and_verify "https://huggingface.co/openai/gpt-oss-20b/resolve/main/config.json" "$OSS_DIR/config.json" "PUT_SHA_HERE"
-download_and_verify "https://huggingface.co/openai/gpt-oss-20b/resolve/main/special_tokens_map.json" "$OSS_DIR/special_tokens_map.json" "PUT_SHA_HERE"
+download_and_verify "https://huggingface.co/openai/gpt-oss-20b/resolve/main/tokenizer_config.json" "$OSS_DIR/tokenizer_config.json" "9279e942392b742d633c7adbb89ebe002c98399db8926a7af5125c726f404070"
+download_and_verify "https://huggingface.co/openai/gpt-oss-20b/resolve/main/config.json" "$OSS_DIR/config.json" "3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce"
+download_and_verify "https://huggingface.co/openai/gpt-oss-20b/resolve/main/special_tokens_map.json" "$OSS_DIR/special_tokens_map.json" "dd5e191d20c12d2fee1da5bae14ca1db0f5f4215300af691f23cdee97120a293"
 
 iptables -F OUTPUT || true
 iptables -A OUTPUT -o lo -j ACCEPT || true
